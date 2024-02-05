@@ -16,7 +16,7 @@ function Hero() {
       </p>
       <div className='flex flex-col md:flex-row items-center gap-4'>
         <input type="email" placeholder='E-posta adresi' className='h-14 w-[300px] md:w-[400px] rounded-md bg-black bg-opacity-50 px-4 border border-gray-600'  />
-        <button className='bg-red-700 px-4 rounded-md text-lg md:text-2xl font-bold h-12 md:h-14 w-[150px] whitespace-nowrap ' > Başlayın <span className='font-light'>&gt;</span> </button>
+        <button className='bg-custom-red px-4 rounded-md text-lg md:text-2xl font-medium h-12 md:h-14 w-[150px] whitespace-nowrap ' > Başlayın <span className='font-light'>&gt;</span> </button>
       </div>
     </div>
   )

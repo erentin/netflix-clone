@@ -2,6 +2,8 @@ import React from 'react'
 
 import Image from 'next/image'
 
+import { IoLanguage } from "react-icons/io5";
+
 function Header() {
   return (
     <div className='flex justify-between py-6 px-[10%]' >
@@ -10,10 +12,10 @@ function Header() {
             <Image src='/images/logonetflix.png' alt="Netflix Logo" fill />
         </div>
 
-        <div className='flex items-center gap-2 md:gap-10' >
+        <div className='relative flex items-center gap-2 md:gap-10'  >
 
-            <div>
-                <select name="" id="" className='bg-transparent h-8 border  border-gray-600 w-14 md:w-28 px-2 rounded-md text-white' >
+            <div className='flex justify-center items-center bg-transparent h-8 border  border-gray-600 w-12 md:w-36 px-2 rounded-md text-white '>
+                <select name="select" id="" className=' bg-transparent  focus:border-none border-none outline-none w-12 md:w-36 px-4 md:block' >
                     
                     <option value="" className='text-black'>Türkçe</option>
                     <option value="" className='text-black'>İngilizce</option>
@@ -21,7 +23,11 @@ function Header() {
                 </select>
             </div>
 
-            <button className='bg-red-600 h-8 px-2  rounded-md font-semibold text-sm' >
+            <label className='absolute left-2' for='select' >
+                <IoLanguage />
+            </label>
+
+            <button className='bg-custom-red h-8 px-2  rounded-md font-semibold text-sm' >
                 Oturum Aç
             </button>
 
