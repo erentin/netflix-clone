@@ -12,6 +12,8 @@ function HomeGuest() {
       <Hero />
       <HorizontalRule />
       <IntroductionTv />
+      <HorizontalRule />
+
       
     </div>
   )

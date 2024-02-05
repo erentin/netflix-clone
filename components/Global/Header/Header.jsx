@@ -1,5 +1,6 @@
 import React from 'react'
 
+import Link from 'next/link';
 import Image from 'next/image'
 
 import { IoLanguage } from "react-icons/io5";
@@ -23,13 +24,13 @@ function Header() {
                 </select>
             </div>
 
-            <label className='absolute left-2' for='select' >
+            <label className='absolute left-2' htmlFor='select' >
                 <IoLanguage />
             </label>
 
-            <button className='bg-custom-red h-8 px-2  rounded-md font-semibold text-sm' >
+            <Link href='/login' className='flex justify-center items-center bg-custom-red h-8 px-2 rounded-md font-semibold text-sm' >
                 Oturum Aç
-            </button>
+            </Link>
 
         </div>
 
