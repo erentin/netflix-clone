@@ -19,7 +19,6 @@ function IntroductionTv() {
             {/* <video src="/images/video-tv.mp4"  autoPlay playsinline muted loop className=' inset-0 z-[1] object-cover' /> */}
           </div>
           
-
         </div>
     </div>
   )
