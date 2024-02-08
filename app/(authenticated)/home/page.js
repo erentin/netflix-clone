@@ -1,8 +1,11 @@
 import React from 'react'
+import HomeAuth from '@/containers/HomeAuth/HomeAuth'
 
 function Home() {
   return (
-    <div>Home</div>
+    <div>
+      <HomeAuth />
+    </div>
   )
 }
 

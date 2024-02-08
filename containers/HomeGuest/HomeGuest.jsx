@@ -7,14 +7,13 @@ import HorizontalRule from '@/components/Global/HorizontalRule/HorizontalRule'
 
 function HomeGuest() {
   return (
-    <div>
+    <div className="mainGuestHome">
       
       <Hero />
       <HorizontalRule />
       <IntroductionTv />
       <HorizontalRule />
 
-      
     </div>
   )
 }

@@ -16,6 +16,12 @@ module.exports = {
         'custom-red': 'rgb(229, 9, 20)',
         'custom-horizontal': 'rgb(35,35,35)',
       },
+      gradientColorStops: theme => ({
+        ...theme('colors'),
+        'black-90': 'rgba(0, 0, 0, 0.9)',
+        'black-50': 'rgba(0, 0, 0, 0.5)',
+        'black-10': 'rgba(0, 0, 0, 0.1)',
+      }),
     },
   },
   plugins: [],

@@ -4,7 +4,7 @@ import {neobrutalism} from "@clerk/themes";
 
 export default function Home() {
   return (
-    <main className="flex justify-center">
+    <main className="flex h-full justify-center items-center">
       <SignUp appearance={{
           baseTheme: neobrutalism,
         }} />

@@ -16,12 +16,18 @@
   }
 }
 
-body {
+body{
+  color: white;
+  background-color: black;
+  height: 100vh;
+}
+
+.mainGuestHome {
+  position: relative;
   color: rgb(var(--foreground-rgb));
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)), url('/images/netflix-banner.jpg');
   background-size: cover;
   background-position: center; /* Resmin merkezlenmesini sağlar */
-  height: 100vh; /* Sayfa boyutunu kaplayacak şekilde ayarlar */
 }
 
 @layer utilities {
