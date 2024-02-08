@@ -9,9 +9,7 @@ import Image from 'next/image'
 import { IoLanguage } from "react-icons/io5";
 
 function Header( {isLoginPage = false} ) {
-
-    const  {userId}  = auth()
-    console.log( userId )
+  const  {userId}  = auth()
 
   return (
     <header className='fixed w-full bg-gradient-to-b from-black to-transparent z-[1000]'>
