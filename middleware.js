@@ -3,6 +3,9 @@ import { NextResponse } from "next/server";
 
 export default authMiddleware({
 
+ 
+  publicRoutes: ["/"],
+
   afterAuth(auth, req, evt) {
 
     console.log(req.nextUrl.pathname)
@@ -14,7 +17,7 @@ export default authMiddleware({
     }
 
   },
-  publicRoutes: ["/"],
+  
 });
  
 export const config = {

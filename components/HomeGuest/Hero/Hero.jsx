@@ -5,7 +5,7 @@ import Image from 'next/image'
 function Hero() {
   return (
 
-    <div className='flex flex-col gap-5 justify-center items-center text-center transparent h-[500px] lg:h-[600px] px-[10%] md:px-[20%]' >
+    <div className='flex flex-col gap-5 justify-center items-center text-center transparent h-[500px] lg:h-[600px] px-[10%] md:px-[20%] text-white' >
       <h1 className='font-black text-3xl md:text-5xl' >
       Sınırsız film, dizi ve çok daha fazlası
       </h1>
