@@ -1,16 +1,19 @@
-import Home from '@/app/(authenticated)/home/page'
+import Home from '@/app/(authenticated)/movies/page'
 import MovieTrailerVideo from '@/components/Auth/MovieTrailerVideo/MovieTrailerVideo'
 import Header from '@/components/Global/Header/Header'
 import React from 'react'
 
-
-function HomeAuth() {
+function HomeAuth( {children }) {
   return (
+
     <div>
+        {children}
         <Header />
         <MovieTrailerVideo />
     </div>
+
   )
+  
 }
 
 export default HomeAuth

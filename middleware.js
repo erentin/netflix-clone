@@ -11,7 +11,7 @@ export default authMiddleware({
     console.log(req.nextUrl.pathname)
 
     if (auth.userId && req.nextUrl.pathname == '/') {
-      console.log(auth.userId, req.nextUrl.pathname, new URL("/home", req.url))
+      console.log(auth.userId, req.nextUrl.pathname, new URL("/movies", req.url))
       const orgSelection = new URL("/home", req.url);
       return NextResponse.redirect(orgSelection);
     }
