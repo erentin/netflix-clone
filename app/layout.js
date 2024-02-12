@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import '@/app/globals.css'
 import { Clerk, ClerkProvider } from "@clerk/nextjs";
+import { dark, neobrutalism } from '@clerk/themes';
 
 import Provider from "./provider";
 
@@ -15,7 +16,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <ClerkProvider>
+    <ClerkProvider
+     appearance={{
+        baseTheme: neobrutalism,
+      }}>
  
       <html lang="en">
         <body className={inter.className}>
