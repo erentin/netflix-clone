@@ -17,8 +17,8 @@ async function MovieTrailerVideo( ) {
 
         <div className="relative w-full">
         
+          <div className="absolute w-full h-full bg-gradient-to-t from-black to-transparent"></div> 
           <video src="/images/loki_new.mp4" autoPlay playsInline muted loop className='w-full object-cover' />
-          <div className="absolute bg-gradient-to-t from-black to-transparent"></div>
 
         </div>
 
