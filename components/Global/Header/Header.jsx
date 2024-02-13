@@ -18,22 +18,20 @@ function Header( {isLoginPage = false} ) {
   const  {userId}  = auth()
 
   return (
-    <header className='fixed w-full bg-gradient-to-b from-black to-transparent z-[1000]'>
+    <header className='absolute w-full bg-gradient-to-b from-black to-transparent z-[1000]'>
 
         <div className={`flex justify-between py-6 gap-10 ${userId ? 'px-[5%]' : 'px-[10%]'}`} >
             <div className={`${userId ? 'relative h-[20px] w-[60px] md:h-[33px] md:w-[100px]' : 'relative h-[33px] w-[100px] md:h-[50px] md:w-[150px]'}`}>
                 <Image src='/images/logonetflix.png' alt="Netflix Logo" fill />
 
             </div>
-                <nav className={`flex flex-row items-center  mr-auto ${userId ? 'text-sm gap-5' : 'text-md gap-10' }`}>
-
+                <nav className={`flex flex-row items-center  mr-auto ${userId ? 'text-sm gap-5' : 'text-md gap-10 hidden' }`}>
                     <Link href="/" >Home</Link>
                     <Link href="/" >TV Shows</Link>
                     <Link href="/" >Movies</Link>
                     <Link href="/" >News & Popular</Link>
                     <Link href="/" >My List</Link>
                     <Link href="/" >Watch Again</Link>
-
                 </nav>
 
                 {
@@ -74,7 +72,6 @@ function Header( {isLoginPage = false} ) {
                                                 
                                             </div>
                                         </>
-                                        
                                     )
                                 }
 

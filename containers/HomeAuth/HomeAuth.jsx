@@ -6,7 +6,7 @@ import React from 'react'
 function HomeAuth( {children }) {
   return (
 
-    <div>
+    <div className='relative'>
         {children}
         <Header />
         <MovieTrailerVideo />

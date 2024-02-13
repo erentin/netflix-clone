@@ -8,11 +8,12 @@ export default authMiddleware({
 
   afterAuth(auth, req, evt) {
 
-    console.log(req.nextUrl.pathname)
+    if (!auth.userId && !auth.isPublicRoute) {
+      return redirectToSignIn({ returnBackUrl: req.url });
+    }
 
-    if (auth.userId && req.nextUrl.pathname == '/') {
-      console.log(auth.userId, req.nextUrl.pathname, new URL("/movies", req.url))
-      const orgSelection = new URL("/home", req.url);
+    if (auth.userId && auth.isPublicRoute) {
+      const orgSelection = new URL("/movies", req.url);
       return NextResponse.redirect(orgSelection);
     }
 

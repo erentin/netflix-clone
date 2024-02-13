@@ -66,9 +66,25 @@ const fetchMovieDetail = async (movie_id) => {
   
 }
 
+const fetchMovieSearch = async (searchParameters) => {
+  
+  try {
+    const response = await fetch(`https://api.themoviedb.org/3/search/movie?query=${searchParameters}`, options);
+    const data = await response.json();
+    const movieDetails = data.results;
+    return movieDetails
+
+  } catch (error) {
+    console.error("Error fetching movie list:", error);
+    throw error; // Hata durumunda hatayı fırlat
+  }
+
+}
+
 export  { 
           fetchPopularMovies,
           fetchTopRatedMovies,
           fetchUpcomingMovies,
-          fetchMovieDetail
+          fetchMovieDetail,
+          fetchMovieSearch
         }

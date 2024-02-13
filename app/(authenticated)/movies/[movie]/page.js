@@ -4,8 +4,6 @@ import React from 'react'
 import { fetchMovieDetail } from '@/utils/api';
 
 async function Movie( { params } ) {
-  
-    console.log("params movie", params.movie )
 
     const movieDetail = await fetchMovieDetail(params.movie);
 
