@@ -12,20 +12,27 @@ import Image from 'next/image'
 
 import { IoLanguage } from "react-icons/io5";
 import { IoIosNotificationsOutline } from "react-icons/io";
+import { IoMenu } from "react-icons/io5";
 import SearchBar from '../SearchBar/SearchBar';
 
 function Header( {isLoginPage = false} ) {
   const  {userId}  = auth()
 
+
+  console.log("User Id:", userId)
+
   return (
     <header className='absolute w-full bg-gradient-to-b from-black to-transparent z-[1000]'>
 
-        <div className={`flex justify-between py-6 gap-10 ${userId ? 'px-[5%]' : 'px-[10%]'}`} >
+        <div className={`flex justify-between items-center py-6 xl:gap-10 ${userId ? 'px-[5%]' : 'px-[10%]'}`} >
+
+            <IoMenu size={30} className='flex md:hidden' />
+
             <div className={`${userId ? 'relative h-[20px] w-[60px] md:h-[33px] md:w-[100px]' : 'relative h-[33px] w-[100px] md:h-[50px] md:w-[150px]'}`}>
                 <Image src='/images/logonetflix.png' alt="Netflix Logo" fill />
 
             </div>
-                <nav className={`flex flex-row items-center  mr-auto ${userId ? 'text-sm gap-5' : 'text-md gap-10 hidden' }`}>
+                <nav className={`hidden items-center  mr-auto ${userId ? 'text-sm gap-5 xl:flex flex-row' : 'text-md gap-10' }`}>
                     <Link href="/" >Home</Link>
                     <Link href="/" >TV Shows</Link>
                     <Link href="/" >Movies</Link>
@@ -64,10 +71,10 @@ function Header( {isLoginPage = false} ) {
                                     (
                                         <>
                                             <SearchBar />
-                                            <IoIosNotificationsOutline size={30} />
+                                            <IoIosNotificationsOutline size={30} className="hidden md:flex" />
                                             <div>
                                                 <SignedIn>
-                                                    <UserButton />
+                                                    <UserButton afterSignOutUrl="/" />
                                                 </SignedIn>
                                                 
                                             </div>

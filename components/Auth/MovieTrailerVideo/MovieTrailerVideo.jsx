@@ -22,7 +22,7 @@ async function MovieTrailerVideo() {
               <Image src="/images/loki_logo.png" alt="Loki" fill objectFit='contain' />
             </div>
             {/* <h1 className='text-[120px] font-bold z-[100000]'>LOKI</h1> */}
-            <h2 className='text-[25px] font-semibold mb-[20px]'>AVAILABLE NOW!</h2>
+            <h2 className='hidden xl:flex text-[25px] font-semibold mb-[20px]'>AVAILABLE NOW!</h2>
             <p className='hidden w-[50%] text-sm 2xl:w-[30%] lg:block'>Loki is an American television series created by Michael Waldron for the streaming service Disney+, based on Marvel Comics featuring the character of the same name. It is the third television series in the Marvel Cinematic Universe (MCU) produced by Marvel Studios, sharing continuity with the films of the franchise. </p>
           </div>
           <video src="/images/loki_new.mp4" autoPlay playsInline muted loop className='w-full object-cover' />
