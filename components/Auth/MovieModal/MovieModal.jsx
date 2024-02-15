@@ -22,7 +22,7 @@ function MovieModal( {movie}  ) {
                         <h1 className=' text-7xl font-bold'>{movie.original_title}</h1>
                         <div className=''>
                             <Link href='/movies' className='flex justify-center items-center bg-custom-red rounded-md font-semibold text-sm max-w-[120px] h-[40px] mt-5' >
-                            <FaPlay /> &nbsp; <span> Play</span>
+                            <FaPlay /> &nbsp; <Link href="/watch"> Play</Link>
                             </Link>
                         </div>
                     </div>
