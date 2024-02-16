@@ -19,7 +19,7 @@ async function MovieTrailerVideo() {
           <div className="absolute w-full h-full bg-gradient-to-t from-black to-transparent"></div> 
           <div className='absolute bottom-[40%] left-[15%] sm:left-[5%]'>
             <div className='relative w-[30%] h-[200px] lg:w-[30%] lg:h-[200px] mb-10'>
-              <Image src="/images/loki_logo.png" alt="Loki" fill objectFit='contain' />
+              <Image src="/images/loki_logo.png" alt="Loki" fill />
             </div>
             {/* <h1 className='text-[120px] font-bold z-[100000]'>LOKI</h1> */}
             <h2 className='hidden xl:flex text-[25px] font-semibold mb-[20px]'>AVAILABLE NOW!</h2>

@@ -11,7 +11,6 @@ function SearchBar() {
   const[searchParam, setSearchParam] = useState("");
 
   useEffect( () => {
-    console.log(searchParam, "ok")
     router.push(pathname + '?search=' + searchParam)
   }, [searchParam])
 

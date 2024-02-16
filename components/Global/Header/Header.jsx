@@ -18,9 +18,6 @@ import SearchBar from '../SearchBar/SearchBar';
 function Header( {isLoginPage = false} ) {
   const  {userId}  = auth()
 
-
-  console.log("User Id:", userId)
-
   return (
     <header className='absolute w-full bg-gradient-to-b from-black to-transparent z-[1000]'>
 
