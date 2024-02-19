@@ -1,6 +1,7 @@
 "use client"
 import React from 'react'
 
+import { useRouter } from 'next/navigation'
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaPlay } from "react-icons/fa";
@@ -9,18 +10,22 @@ import { FaImdb } from "react-icons/fa";
 
 function MovieModal( {movie}  ) {
 
+    const handleClick = (event) => {
+        event.preventDefault();
+    };
+     
     return (
     <>
         <Link href="/movies" className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 z-[100000]">
-            <div className="bg-custom-gray rounded-md max-w-[920px] w-[100%] h-[90%] overflow-auto" onClick={(e) => e.stopPropagation()}>
+            <div className="bg-custom-gray rounded-md max-w-[920px] w-[100%] h-[90%] overflow-auto" onClick={handleClick} >
 
-                <div className="relative w-full h-[510px]">
+                <div className="relative w-full h-[510px]" onClick={handleClick}>
 
-                    <div className='absolute bottom-[20%] left-[5%] z-[1000]'>
+                    <div className='absolute bottom-[20%] left-[5%] z-[1000]' onClick={handleClick}>
                         <h1 className=' text-7xl font-bold'>{movie.original_title}</h1>
                         <div className=''>
                             <Link href='/movies' className='flex justify-center items-center bg-custom-red rounded-md font-semibold text-sm max-w-[120px] h-[40px] mt-5' >
-                            <FaPlay /> &nbsp; <Link href={`/watch/${movie.movie_id}`}> Play</Link>
+                            <FaPlay /> &nbsp; <Link href={`/watch/${movie.id}`}> Play</Link>
                             </Link>
                         </div>
                     </div>
