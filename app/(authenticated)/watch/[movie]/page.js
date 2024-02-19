@@ -130,8 +130,10 @@ function Watch() {
               style={{transition: 'opacity 0.1s ease-in'}}>
             <div className='flex justify-center w-full h-2'>
               <div className='bg-gray-600 w-[100%] rounded-md'>
-              <div className={`bg-custom-red h-[100%] rounded-md`} style={{ width: (currentTime * (100/duration) )+'%', transition: 'width 0.3s ease-in'}}>
+                <div className={`relative bg-custom-red h-[100%] rounded-md`} style={{ width: currentTime ?  (currentTime * (100/duration) )+'%' : 0 , transition: 'width 0.3s ease-in'}}>
+                  <div className='absolute bg-custom-red w-4 h-4 right-0 rounded-full translate-y-[-20%]'>
 
+                  </div>
                 </div>
               </div>
               <div></div>
