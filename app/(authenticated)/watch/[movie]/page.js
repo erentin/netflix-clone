@@ -168,8 +168,8 @@ function Watch() {
 
                 {
                   subtitles 
-                  ? <MdSubtitlesOff size={20} onClick={toggleSubstitle} />
-                  : <MdSubtitles size={20} onClick={toggleSubstitle} />
+                  ? <MdSubtitles size={20} onClick={toggleSubstitle} />
+                  : <MdSubtitlesOff size={20} onClick={toggleSubstitle} />
                 }
 
                 {
