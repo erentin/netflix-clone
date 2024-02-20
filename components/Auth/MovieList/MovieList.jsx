@@ -20,8 +20,7 @@ function MovieList(  { movies, title}  ) {
                         src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} 
                         alt='eren' 
                         fill 
-                        placeholder='blur'
-                        blurDataURL={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} 
+                        loading='lazy'
                         className='w-full object-cover' />
                   </Link>
               )

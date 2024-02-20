@@ -24,7 +24,7 @@ function MovieModal( {movie}  ) {
                     <div className='absolute bottom-[20%] left-[5%] z-[1000]' onClick={handleClick}>
                         <h1 className=' text-7xl font-bold'>{movie.original_title}</h1>
                         <div className=''>
-                            <Link href='/movies' className='flex justify-center items-center bg-custom-red rounded-md font-semibold text-sm max-w-[120px] h-[40px] mt-5' >
+                            <Link href={`/watch/${movie.id}`} className='flex justify-center items-center bg-custom-red rounded-md font-semibold text-sm max-w-[120px] h-[40px] mt-5' >
                             <FaPlay /> &nbsp; <Link href={`/watch/${movie.id}`}> Play</Link>
                             </Link>
                         </div>
